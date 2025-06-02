@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdaClean</title>
+    <link rel="stylesheet" href="output.css">
+    <script defer src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="header-content">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="lucide lucide-recycle" aria-hidden="true">
+                    <path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"></path>
+                    <path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"></path>
+                    <path d="m14 16-3 3 3 3"></path>
+                    <path d="M8.293 13.596 7.196 9.5 3.1 10.598"></path>
+                    <path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843">
+                    </path>
+                    <path d="m13.378 9.633 4.096 1.098 1.097-4.096"></path>
+                </svg>
+                <h1 class="header-title">AdaClean</h1>
+            </div>
+            <p class="header-subtitle">Act for a cleaner environment.</p>
+        </header>
+        <div>
+            <nav class="navbar">
+                <div class="navbar-container">
+                    <a class="navbar-link " href="/Projects/AdaClean_Front/index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sprout"
+                            aria-hidden="true" href="/">
+                            <path d="M7 20h10"></path>
+                            <path d="M10 20c5.5-2.5.8-6.4 3-10"></path>
+                            <path
+                                d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z">
+                            </path>
+                            <path
+                                d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z">
+                            </path>
+                        </svg>
+                        <span>Dashboard</span>
+                    </a>
+                    <a class="navbar-link active" href="/Projects/AdaClean_Front/share_action.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-package-plus" aria-hidden="true">
+                            <path d="M16 16h6"></path>
+                            <path d="M19 13v6"></path>
+                            <path
+                                d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14">
+                            </path>
+                            <path d="m7.5 4.27 9 5.15"></path>
+                            <polyline points="3.29 7 12 12 20.71 7"></polyline>
+                            <line x1="12" x2="12" y1="22" y2="12"></line>
+                        </svg>
+                        <span>Gatherings</span>
+                    </a>
+                    <a class="navbar-link " href="/Projects/AdaClean_Front/profile.html">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-user" aria-hidden="true">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <span>Profile</span>
+                    </a>
+                </div>
+            </nav>
+            <div class="main-content">
+                <div class="card">
+                    <div class="card">
+                        <h2 class="card-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-alert"
+                                aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" x2="12" y1="8" y2="12"></line>
+                                <line x1="12" x2="12.01" y1="16" y2="16"></line>
+                            </svg> &nbsp; Save a new gathering</h2>
+                        <div class="form-container">
+                            <div>
+                                <label class="form-label">Date *</label>
+                                <input type="date" value="2025-06-02">
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-sm font-medium text-gray-700">Localisation</span>
+                                </div>
+                                <select>
+                                    <option value="">Select a city</option>
+                                    <option value="1">Paris</option>
+                                    <option value="2">Marseille</option>
+                                    <option value="3">Lyon</option>
+                                    <option value="4">Toulouse</option>
+                                    <option value="5">Nice</option>
+                                    <option value="6">Nantes</option>
+                                    <option value="7">Strasbourg</option>
+                                    <option value="8">Montpellier</option>
+                                    <option value="9">Bordeaux</option>
+                                    <option value="10">Lille</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="form-label">Waste type *</label>
+                                <div class="waste-types-grid">
+                                    <div>
+                                        <button type="button" class="waste-type-btn ">🚬  Cigarette butt</button>
+                                        <div class="flex items-center gap-2">
+                                            <button
+                                                class="p-1 rounded-full hover:bg-gray-100" disabled="">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus text-gray-400" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg>
+                                            </button>
+                                            <input min="0" class="w-16 text-center" type="number"
+                                                value="0">
+                                                <button class="p-1 rounded-full hover:bg-gray-100">
+                                                    <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus text-gray-600" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="waste-type-btn ">🥤 Plastic</button>
+                                        <div class="flex items-center gap-2">
+                                            <button
+                                                class="p-1 rounded-full hover:bg-gray-100" disabled="">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus text-gray-400" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg>
+                                            </button>
+                                            <input min="0" class="w-16 text-center" type="number"
+                                                value="0">
+                                                <button class="p-1 rounded-full hover:bg-gray-100">
+                                                    <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus text-gray-600" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="waste-type-btn ">🍶 Glass</button>
+                                        <div class="flex items-center gap-2">
+                                            <button
+                                                class="p-1 rounded-full hover:bg-gray-100" disabled="">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus text-gray-400" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg>
+                                            </button>
+                                            <input min="0" class="w-16 text-center" type="number"
+                                                value="0">
+                                                <button class="p-1 rounded-full hover:bg-gray-100">
+                                                    <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus text-gray-600" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="waste-type-btn ">🥫 Metal</button>
+                                        <div class="flex items-center gap-2">
+                                            <button
+                                                class="p-1 rounded-full hover:bg-gray-100" disabled="">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus text-gray-400" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg>
+                                            </button>
+                                            <input min="0" class="w-16 text-center" type="number"
+                                                value="0">
+                                                <button class="p-1 rounded-full hover:bg-gray-100">
+                                                    <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus text-gray-600" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="waste-type-btn ">📱 Electronic</button>
+                                        <div class="flex items-center gap-2">
+                                            <button
+                                                class="p-1 rounded-full hover:bg-gray-100" disabled="">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus text-gray-400" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg>
+                                            </button>
+                                            <input min="0" class="w-16 text-center" type="number"
+                                                value="0">
+                                                <button class="p-1 rounded-full hover:bg-gray-100">
+                                                    <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus text-gray-600" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="waste-type-btn ">❓ Other</button>
+                                        <div class="flex items-center gap-2">
+                                            <button
+                                                class="p-1 rounded-full hover:bg-gray-100" disabled="">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-minus text-gray-400" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                </svg>
+                                            </button>
+                                            <input min="0" class="w-16 text-center" type="number"
+                                                value="0">
+                                                <button class="p-1 rounded-full hover:bg-gray-100">
+                                                    <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-plus text-gray-600" aria-hidden="true">
+                                                    <path d="M5 12h14"></path>
+                                                    <path d="M12 5v14"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p>* Mandatory field</p>
+                                </div>
+                            </div>
+                            <button disabled="" class="submit-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    class="lucide lucide-save" aria-hidden="true">
+                                    <path
+                                        d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z">
+                                    </path>
+                                    <path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"></path>
+                                    <path d="M7 3v4a1 1 0 0 0 1 1h7"></path>
+                                </svg>
+                                <span>Save</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p class="info-text">🌱 Thanks for acting for Earth. You're part of the change.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
