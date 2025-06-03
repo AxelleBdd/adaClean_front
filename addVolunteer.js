@@ -22,7 +22,7 @@ async function createUser() { // to create the users
         email: inputEmail.value,
         password: inputPassword.value,
     }
-    console.log(dataUser) // ok fonctionnel 
+     
 
     try {
 
@@ -36,7 +36,7 @@ async function createUser() { // to create the users
 
         });
         const result = await response.json();
-        console.log("Utilisateur créé :", result)
+        alert("Utilisateur créé :", result)
 
 
 

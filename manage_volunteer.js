@@ -2,7 +2,6 @@
 
 const addButton = document.getElementById("addVolunteer");
 const getUserURL = ("http://localhost:8081/api/volunteer/all");
-const createUserURL = ("http://localhost:8081/api/volunteer");
 
 
 // Fonctions 
@@ -25,6 +24,11 @@ async function fetchUsers() { // api call to Get volunteers created (Volunteer m
 
             const volunteerFName = document.createElement("h3");
             const volunteerCity = document.createElement("p");
+            
+            const VolunteerAction = document.createElement("div")
+            VolunteerAction.classList.add("volunteer-actions");
+            const deleteButton = document.createElement("button"); // added delete button for Delete request. 
+            deleteButton.classList.add("action-btn", "delete-btn");
 
             volunteerFName.innerText = `${user.first_name} ${user.last_name}`;
             volunteerCity.innerText = `${user.city}`;
@@ -34,6 +38,9 @@ async function fetchUsers() { // api call to Get volunteers created (Volunteer m
 
             volunteerItem.appendChild(volunteerInfo);
             nameContainer.appendChild(volunteerItem);
+
+            volunteerItem.appendChild(VolunteerAction);
+            VolunteerAction.appendChild(deleteButton);
         });
 
 
