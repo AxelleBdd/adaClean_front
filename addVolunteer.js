@@ -28,7 +28,7 @@ async function createUser() { // to create the users
 
         const response = await fetch(createUserURL, {
             method: "POST",
-            hearders: {
+            headers: {
                 "Content-Type": "application/json", // unsupported media type 
                 
             },
