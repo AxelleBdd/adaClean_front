@@ -1,27 +1,20 @@
 // Variables et constantes
 
-const dashboardButton = document.getElementById("dashboard");
-const gatheringButton = document.getElementById("gatherings");
-const profileButton = document.getElementById("profile");
 const addButton = document.getElementById("addVolunteer");
 const getUserURL = ("http://localhost:8081/api/volunteer/all");
 const createUserURL = ("http://localhost:8081/api/volunteer");
 
 
-
-
-
-
 // Fonctions 
 
-async function fetchUsers() { // Get users (Volunteer management)
+async function fetchUsers() { // api call to Get volunteers created (Volunteer management)
     try {
         const response = await fetch(`${getUserURL}`);
         const result = await response.json();
         console.log(result);
 
         const nameContainer = document.querySelector(".volunteers-list");
-        nameContainer.innerHTML = ""; 
+        nameContainer.innerHTML = "";
 
         result.forEach(user => {
             const volunteerItem = document.createElement("div");
@@ -40,7 +33,7 @@ async function fetchUsers() { // Get users (Volunteer management)
             volunteerInfo.appendChild(volunteerCity);
 
             volunteerItem.appendChild(volunteerInfo);
-            nameContainer.appendChild(volunteerItem); 
+            nameContainer.appendChild(volunteerItem);
         });
 
 
@@ -56,7 +49,7 @@ async function createUser() { // to create the users
 
         const response = await fetch(`${createUserURL}`);
         const result = await response.json();
-      
+
         console.log(result);
 
 
@@ -75,7 +68,7 @@ async function createUser() { // to create the users
 
 fetchUsers();
 
-addButton.addEventListener("click", function () {
-    fetchUsers()
-});
+// addButton.addEventListener("click", function () {
+//     fetchUsers()
+// });
 
