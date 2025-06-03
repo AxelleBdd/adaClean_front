@@ -350,6 +350,7 @@ footer {
   cursor: pointer;
   font-weight: 500;
   transition: background-color 0.2s;
+  margin-bottom: inherit;
 }
 .submit-btn:hover:not(:disabled), .donate-btn:hover:not(:disabled) {
   background-color: #046378;
@@ -675,6 +676,10 @@ footer {
 .volunteer-actions {
   display: flex;
   gap: 0.5rem;
+}
+.city-actions {
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .action-btn {
   padding: 0.5rem;

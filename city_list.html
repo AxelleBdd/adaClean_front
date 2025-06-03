@@ -34,7 +34,7 @@
         <div>
             <nav class="navbar">
                 <div class="navbar-container">
-                    <a class="navbar-link active" href="/manage-volunteer.html"><svg xmlns="http://www.w3.org/2000/svg"
+                    <a class="navbar-link" href="/manage-volunteer.html"><svg xmlns="http://www.w3.org/2000/svg"
                             width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sprout"
                             aria-hidden="true">
@@ -93,7 +93,7 @@
                             <path d="M8 10h.01" />
                             <path d="M8 14h.01" />
                         </svg>
-                        <span>Cities list</span>
+                        <span>City list</span>
                     </a>
                     <a id="profile" class="navbar-link " href="/profile.html">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -108,68 +108,57 @@
             </nav>
             <main class="main-content">
                 <div class="card">
-                    <div class="volunteer-actions"><button class="submit-btn"><svg xmlns="http://www.w3.org/2000/svg"
-                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-building-icon lucide-building">
-                            <rect width="16" height="20" x="4" y="2" rx="2" ry="2" />
-                            <path d="M9 22v-4h6v4" />
-                            <path d="M8 6h.01" />
-                            <path d="M16 6h.01" />
-                            <path d="M12 6h.01" />
-                            <path d="M12 10h.01" />
-                            <path d="M12 14h.01" />
-                            <path d="M16 10h.01" />
-                            <path d="M16 14h.01" />
-                            <path d="M8 10h.01" />
-                            <path d="M8 14h.01" />
-                            <line x1="19" x2="19" y1="8" y2="14"></line>
-                            <line x1="22" x2="16" y1="11" y2="11"></line>
-                            </svg>Add a city
-                        </button>
+                    <div class="volunteers-actions"><button class="submit-btn"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-user-plus" aria-hidden="true">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <line x1="19" x2="19" y1="8" y2="14"></line>
+                                <line x1="22" x2="16" y1="11" y2="11"></line>
+                            </svg>Add a city</button>
                         <div class="search-filters">
                             <div class="search-container"><input type="text" placeholder="Search for a city..."
-                                    class="search-input" value="">
-                                </div>
-                            </div>
+                                    class="search-input" value=""></div>
                         </div>
-                        <div class="volunteer-list">
-                            <div class="volunteer-item">
-                                <div class="city-info">
-                                    <p>Lyon</p>
-                                </div>
-                                <div class="volunteer-actions"><button class="action-btn delete-btn"><svg
-                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="lucide lucide-trash2 lucide-trash-2"
-                                    aria-hidden="true">
-                                    <path d="M3 6h18"></path>
-                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
-                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
-                                    <line x1="10" x2="10" y1="11" y2="17"></line>
-                                    <line x1="14" x2="14" y1="11" y2="17"></line>
-                                </svg></button></div>
+                    </div>
+                    <div class="volunteers-list">
+                        <div class="volunteer-item">
+                            <div class="volunteer-info">
+                                <h3>Lyon</h3>
                             </div>
-                            <div class="volunteer-item">
-                                <div class="volunteer-info">
-                                    <p>Paris</p>
-                                </div>
-                                <div class="volunteer-actions"><button class="action-btn delete-btn"><svg
-                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="lucide lucide-trash2 lucide-trash-2"
-                                    aria-hidden="true">
-                                    <path d="M3 6h18"></path>
-                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
-                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
-                                    <line x1="10" x2="10" y1="11" y2="17"></line>
-                                    <line x1="14" x2="14" y1="11" y2="17"></line>
-                                </svg>
-                            </button>
+                            <div class="volunteer-actions"><button class="action-btn delete-btn"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-trash2 lucide-trash-2"
+                                        aria-hidden="true">
+                                        <path d="M3 6h18"></path>
+                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                        <line x1="10" x2="10" y1="11" y2="17"></line>
+                                        <line x1="14" x2="14" y1="11" y2="17"></line>
+                                    </svg></button></div>
+                        </div>
+                        <div class="volunteer-item">
+                            <div class="volunteer-info">
+                                <h3>Paris</p>
+                            </div>
+                            <div class="volunteer-actions"><button class="action-btn delete-btn"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-trash2 lucide-trash-2"
+                                        aria-hidden="true">
+                                        <path d="M3 6h18"></path>
+                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                        <line x1="10" x2="10" y1="11" y2="17"></line>
+                                        <line x1="14" x2="14" y1="11" y2="17"></line>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             </main>
         </div>
     </div>

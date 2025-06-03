@@ -266,6 +266,7 @@ footer {
   cursor: pointer;
   font-weight: 500;
   transition: background-color 0.2s;
+  margin-bottom: inherit;
 }
 
 .submit-btn:hover:not(:disabled),
@@ -662,6 +663,11 @@ footer {
 .volunteer-actions {
   display: flex;
   gap: 0.5rem;
+}
+
+.city-actions {
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .action-btn {
