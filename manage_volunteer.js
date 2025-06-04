@@ -47,11 +47,16 @@ async function fetchUsers() { // api call to Get volunteers created (Volunteer m
             volunteerItem.appendChild(volunteerInfo);
             nameContainer.appendChild(volunteerItem);
 
+            const updateButton = document.createElement('button'); //Création bouton update
+            updateButton.className = "action-btn";
+            updateButton.className = "edit-btn";
 
-            deleteButton = document.createElement('button'); //Création bouton delete
-            deleteButton.className = "action-btn"
+            const deleteButton = document.createElement('button'); //Création bouton delete
+            deleteButton.className = "action-btn";
             deleteButton.className = "delete-btn";
 
+
+            svgUpdate(updateButton);
             svgDelete(deleteButton);
 
             deleteButton.addEventListener("click", () => {
@@ -60,9 +65,11 @@ async function fetchUsers() { // api call to Get volunteers created (Volunteer m
             });
 
             volunteerItem.appendChild(VolunteerAction);
+            VolunteerAction.appendChild(updateButton);
             VolunteerAction.appendChild(deleteButton);
 
             return deleteButton;
+
 
         });
 
@@ -122,6 +129,32 @@ function svgDelete(button) {
 
 }
 
+function svgUpdate(button) {
+
+    // Créer le SVG avec createElementNS
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+    svg.setAttribute('width', '16');
+    svg.setAttribute('height', '16');
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('fill', 'none');
+    svg.setAttribute('stroke', 'currentColor');
+    svg.setAttribute('stroke-width', '2');
+    svg.setAttribute('stroke-linecap', 'round');
+    svg.setAttribute('stroke-linejoin', 'round');
+    svg.setAttribute('class', 'lucide lucide-trash2 lucide-trash-2');
+    svg.setAttribute('aria-hidden', 'true');
+
+    // Créer chaque élément path avec createElementNS
+    const path1 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path1.setAttribute('d', 'M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z');
+
+    // Assembler tous les éléments dans le SVG
+    svg.appendChild(path1);
+    button.appendChild(svg);
+
+}
+
 async function createUser() { // to create the users
 
     const dataUser = {
@@ -132,7 +165,6 @@ async function createUser() { // to create the users
         email: inputEmail.value,
         password: inputPassword.value,
     }
-
 
     try {
 
@@ -157,45 +189,6 @@ async function createUser() { // to create the users
 
 
 }
-
-
-async function deleteUser(id) {
-
-    try {
-
-        const response = await fetch(`${userURL}/${id}`, {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json", 
-
-            }
-            
-        });
-        
-        const result = await response.json();
-       
-        if (result.ok) {
-            alert("Utilisateur supprimé !");
-            document.querySelector("#card").innerHTML = "";
-            fetchUsers();
-        } else {
-            alert("Erreur lors de la suppression");
-        }
-
-       
-        
-
-
-
-    }
-    catch (error) {
-        console.error(error.message);
-    }
-
-
-}
-
-
 
 
 // Exécution du code 
