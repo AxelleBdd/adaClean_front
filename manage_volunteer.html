@@ -116,23 +116,7 @@
                                 <line x1="19" x2="19" y1="8" y2="14"></line>
                                 <line x1="22" x2="16" y1="11" y2="11"></line>
                             </svg>Add a volunteer</button>
-                        <div class="search-filters">
-                            <div class="search-container"><input type="text" placeholder="Search for a volunteer..."
-                                    class="search-input" value=""></div>
-                            <div class="location-filter"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round"
-                                    class="lucide lucide-map-pin search-icon" aria-hidden="true">
-                                    <path
-                                        d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
-                                    </path>
-                                    <circle cx="12" cy="10" r="3"></circle>
-                                </svg><select class="search-input">
-                                    <option value="" selected="">Choose city</option>
-                                    <option value="Paris">Paris</option>
-                                    <option value="Nantes">Nantes</option>
-                                    <option value="Lyon">Lyon</option>
-                                </select></div>
+                                <div id="container"></div>
                         </div>
                     </div>
                 </div>
@@ -158,6 +142,32 @@
                         <div class="modal-actions">
                             <button type="submit" class="submit-btn" id="add">Add</button>
                             <button type="button" class="submit-btn" id="cancel"
+                                style="background-color: rgb(107, 114, 128);">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+             <div class="modal-overlay" id="editModal">
+                <div class="modal">
+                    <h3>Add a volunteer</h3>
+                    <form class="form-container">
+                        <div><label class="form-label">First Name</label><input id="fname" required="" type="text"
+                                value="">
+                        </div>
+                        <div><label class="form-label">Last name</label><input id="lname" required="" type="text"
+                                value="">
+                        </div>
+                        <div><label class="form-label">Email</label><input id="email" required="" type="email" value="">
+                        </div>
+                        <div><label class="form-label">Password</label><input id="password" required="" type="password"
+                                value="">
+                        </div>
+                        <div><label class="form-label">City</label><input id="location" required="" type="text"
+                                value="">
+                        </div>
+                        <div class="modal-actions">
+                            <button type="submit" class="submit-btn" id="edit">Edit</button>
+                            <button type="button" class="submit-btn" id="editCancel"
                                 style="background-color: rgb(107, 114, 128);">Cancel</button>
                         </div>
                     </form>
