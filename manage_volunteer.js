@@ -47,11 +47,11 @@ async function fetchUsers() { // api call to Get volunteers created (Volunteer m
             nameContainer.appendChild(volunteerItem);
 
             const updateButton = document.createElement('button'); //Création bouton update
-            updateButton.className = "action-btn"
-            updateButton.className = "update-btn";
+            updateButton.className = "action-btn";
+            updateButton.className = "edit-btn";
 
             const deleteButton = document.createElement('button'); //Création bouton delete
-            deleteButton.className = "action-btn"
+            deleteButton.className = "action-btn";
             deleteButton.className = "delete-btn";
 
 
