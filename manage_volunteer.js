@@ -7,8 +7,8 @@ const createUserURL = ("http://localhost:8081/api/volunteer");
 const inputFName = document.getElementById("fname");
 const inputLastName = document.getElementById("lname");
 const inputEmail = document.getElementById("email");
-const inputPassword = document.getElementById("Password");
-const inputLocation = document.getElementById("Location");
+const inputPassword = document.getElementById("password");
+const inputLocation = document.getElementById("location");
 
 const submitButton = document.getElementById("add");
 const cancelButton = document.getElementById("cancel");
