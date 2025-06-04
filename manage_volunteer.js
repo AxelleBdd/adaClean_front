@@ -5,25 +5,25 @@ const inputLastName = document.getElementById("lname");
 const inputEmail = document.getElementById("email");
 const inputPassword = document.getElementById("password");
 const inputLocation = document.getElementById("location");
-
+let deleteButton;
 const addButton = document.getElementById("addVolunteer");
 const submitButton = document.getElementById("add");
 const cancelButton = document.getElementById("cancel");
 const modal = document.getElementById("modal");
 
 const getUserURL = ("http://localhost:8081/api/volunteer/all");
-const createUserURL = ("http://localhost:8081/api/volunteer");
+const userURL = ("http://localhost:8081/api/volunteer");
 
 // Fonctions 
 
 async function fetchUsers() { // api call to Get volunteers created (Volunteer management)
+
     try {
         const response = await fetch(`${getUserURL}`);
         const result = await response.json();
         console.log(result);
 
         const nameContainer = document.querySelector("#card");
-
 
         result.forEach(user => {
             const volunteerItem = document.createElement("div");
@@ -48,18 +48,23 @@ async function fetchUsers() { // api call to Get volunteers created (Volunteer m
             nameContainer.appendChild(volunteerItem);
 
 
-            const deleteButton = document.createElement('button'); //Création bouton delete
+            deleteButton = document.createElement('button'); //Création bouton delete
             deleteButton.className = "action-btn"
             deleteButton.className = "delete-btn";
 
             svgDelete(deleteButton);
 
+            deleteButton.addEventListener("click", () => {
+                deleteUser(user.id);
+
+            });
+
             volunteerItem.appendChild(VolunteerAction);
             VolunteerAction.appendChild(deleteButton);
 
             return deleteButton;
-        });
 
+        });
 
     }
     catch (error) {
@@ -67,9 +72,7 @@ async function fetchUsers() { // api call to Get volunteers created (Volunteer m
     }
 }
 
-
 function svgDelete(button) {
-
 
     // Créer le SVG avec createElementNS
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -115,11 +118,9 @@ function svgDelete(button) {
     svg.appendChild(line1);
     svg.appendChild(line2);
 
-
     button.appendChild(svg);
 
 }
-
 
 async function createUser() { // to create the users
 
@@ -135,10 +136,10 @@ async function createUser() { // to create the users
 
     try {
 
-        const response = await fetch(createUserURL, {
+        const response = await fetch(userURL, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json", // unsupported media type 
+                "Content-Type": "application/json",
 
             },
             body: JSON.stringify(dataUser)
@@ -158,6 +159,45 @@ async function createUser() { // to create the users
 }
 
 
+async function deleteUser(id) {
+
+    try {
+
+        const response = await fetch(`${userURL}/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json", 
+
+            }
+            
+        });
+        
+        const result = await response.json();
+       
+        if (result.ok) {
+            alert("Utilisateur supprimé !");
+            document.querySelector("#card").innerHTML = "";
+            fetchUsers();
+        } else {
+            alert("Erreur lors de la suppression");
+        }
+
+       
+        
+
+
+
+    }
+    catch (error) {
+        console.error(error.message);
+    }
+
+
+}
+
+
+
+
 // Exécution du code 
 fetchUsers();
 modal.style.display = "none";
@@ -169,6 +209,11 @@ addButton.addEventListener("click", function () {
 submitButton.addEventListener("click", function () {
     createUser();
     modal.style.display = "none";
+})
+
+deleteButton.addEventListener("click", function () {
+    deleteUser();
+
 })
 
 cancelButton.addEventListener("click", function () {
