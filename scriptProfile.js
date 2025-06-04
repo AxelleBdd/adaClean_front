@@ -9,10 +9,6 @@ const getUserURL = ("http://localhost:8081/api/volunteer/all");
 const createUserURL = ("http://localhost:8081/api/volunteer");
 
 
-
-
-
-
 // Fonctions 
 
 async function fetchUsers() { // Get users (Volunteer management)
@@ -34,7 +30,6 @@ async function createUser() {
 
         const response = await fetch(`${createUserURL}`);
         const result = await response.json();
-        let userFName = 
         console.log(result);
 
 
@@ -45,14 +40,6 @@ async function createUser() {
 
 
 }
-
-
-
-
-
-
-
-
 
 
 
