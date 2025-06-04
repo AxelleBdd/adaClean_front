@@ -133,6 +133,7 @@
                                     <option value="Nantes">Nantes</option>
                                     <option value="Lyon">Lyon</option>
                                 </select></div>
+                                <div id="container"></div>
                         </div>
                     </div>
                 </div>
@@ -158,6 +159,32 @@
                         <div class="modal-actions">
                             <button type="submit" class="submit-btn" id="add">Add</button>
                             <button type="button" class="submit-btn" id="cancel"
+                                style="background-color: rgb(107, 114, 128);">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+             <div class="modal-overlay" id="editModal">
+                <div class="modal">
+                    <h3>Add a volunteer</h3>
+                    <form class="form-container">
+                        <div><label class="form-label">First Name</label><input id="fname" required="" type="text"
+                                value="">
+                        </div>
+                        <div><label class="form-label">Last name</label><input id="lname" required="" type="text"
+                                value="">
+                        </div>
+                        <div><label class="form-label">Email</label><input id="email" required="" type="email" value="">
+                        </div>
+                        <div><label class="form-label">Password</label><input id="password" required="" type="password"
+                                value="">
+                        </div>
+                        <div><label class="form-label">City</label><input id="location" required="" type="text"
+                                value="">
+                        </div>
+                        <div class="modal-actions">
+                            <button type="submit" class="submit-btn" id="edit">Edit</button>
+                            <button type="button" class="submit-btn" id="editCancel"
                                 style="background-color: rgb(107, 114, 128);">Cancel</button>
                         </div>
                     </form>

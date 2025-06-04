@@ -9,6 +9,11 @@ const addButton = document.getElementById("addVolunteer");
 const submitButton = document.getElementById("add");
 const cancelButton = document.getElementById("cancel");
 const modal = document.getElementById("modal");
+const editButton = document.getElementById("edit");
+const editCancelButton = document.getElementById("editCancel");
+const editModal = document.getElementById("editModal");
+
+
 
 const getUserURL = ("http://localhost:8081/api/volunteer/all");
 const userURL = ("http://localhost:8081/api/volunteer");
@@ -22,8 +27,8 @@ async function fetchUsers() { // api call to Get volunteers created (Volunteer m
         const result = await response.json();
         console.log(result);
 
-        const nameContainer = document.querySelector("#card");
-
+        const nameContainer = document.querySelector("#container");
+        nameContainer.innerHTML = "";
         result.forEach(user => {
             const volunteerItem = document.createElement("div");
             volunteerItem.className = "volunteer-item";
@@ -64,7 +69,8 @@ async function fetchUsers() { // api call to Get volunteers created (Volunteer m
             });
 
             updateButton.addEventListener("click", () => {
-                editUser(user.id);
+                editModal.style.display = "flex";
+                // editUser(user.id);
 
             });
 
@@ -157,7 +163,7 @@ function svgUpdate(button) {
     button.appendChild(svg);
 }
 
-async function createUser() { 
+async function createUser() {
 
     const dataUser = {
         first_name: inputFName.value,
@@ -199,17 +205,18 @@ async function deleteUser(id) {
         const response = await fetch(`${userURL}/${id}`, {
             method: "DELETE",
             headers: {
-                "Content-Type": "application/json", 
+                "Content-Type": "application/json",
 
             }
-            
+
         });
-        
-        const result = await response.json();
-       
-        if (result.ok) {
+
+        // const result = await response.json();
+
+        if (response.ok) {
+
             alert("Utilisateur supprimé !");
-            document.querySelector("#card").innerHTML = "";
+            // document.querySelector("#card").innerHTML = "";
             fetchUsers();
         } else {
             alert("Erreur lors de la suppression");
@@ -221,23 +228,33 @@ async function deleteUser(id) {
         console.error(error.message);
     }
 
-} 
+}
 
 async function editUser(id) {
+
+     const dataUser = {
+        first_name: inputFName.value,
+        last_name: inputLastName.value,
+        city: inputLocation.value,
+        status: "user",
+        email: inputEmail.value,
+        password: inputPassword.value,
+    }
 
     try {
 
         const response = await fetch(`${userURL}/${id}`, {
             method: "PUT",
             headers: {
-                "Content-Type": "application/json", 
+                "Content-Type": "application/json",
 
-            }
-            
+            },
+            body: JSON.stringify(dataUser)
+
         });
-        
+
         const result = await response.json();
-       
+
         if (result.ok) {
             alert("Utilisateur modifié !");
             document.querySelector("#card").innerHTML = "";
@@ -258,8 +275,10 @@ async function editUser(id) {
 
 
 // Exécution du code 
+
 fetchUsers();
 modal.style.display = "none";
+editModal.style.display = "none";
 
 addButton.addEventListener("click", function () {
     modal.style.display = "flex";
@@ -268,6 +287,20 @@ addButton.addEventListener("click", function () {
 submitButton.addEventListener("click", function () {
     createUser();
     modal.style.display = "none";
+})
+
+editButton.addEventListener("click", function () {
+    editUser(id);
+    modal.style.display = "flex";
+});
+
+editCancelButton.addEventListener("click", function () {
+    modal.style.display = "none";
+    inputFName.innerText = "";
+    inputLastName.innerText = "";
+    inputEmail.innerText = "";
+    inputPassword.innerText = "";
+    inputLocation.innerText = "";
 })
 
 cancelButton.addEventListener("click", function () {
