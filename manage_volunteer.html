@@ -107,8 +107,9 @@
                 </div>
             </nav>
             <main class="main-content">
-                <div class="card">
-                    <div class="volunteers-actions"><button id="addVolunteer" class="submit-btn"><svg
+                <div id="card" class="card">
+                    <div class="volunteers-actions">
+                        <button id="addVolunteer" class="submit-btn"><svg
                                 xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="lucide lucide-user-plus" aria-hidden="true">
@@ -136,133 +137,52 @@
                                 </select></div>
                         </div>
                     </div>
-                    <div class="volunteers-list">
-                        <div class="volunteer-item">
-                            <div class="volunteer-info">
 
-                            </div>
-                            <div class="volunteer-actions"><button class="action-btn delete-btn"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="lucide lucide-trash2 lucide-trash-2"
-                                        aria-hidden="true">
-                                        <path d="M3 6h18"></path>
-                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
-                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
-                                        <line x1="10" x2="10" y1="11" y2="17"></line>
-                                        <line x1="14" x2="14" y1="11" y2="17"></line>
-                                    </svg></button></div>
+                    <div class="volunteer-item">
+                        <div class="volunteer-info">
+                            <h3>Rachel Green</h3>
+                            <p>Paris</p>
                         </div>
-                        <div class="volunteer-item">
-                            <div class="volunteer-info">
-                                <h3>Rachel Green</h3>
-                                <p>Paris</p>
-                            </div>
-                            <div class="volunteer-actions"><button class="action-btn delete-btn"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="lucide lucide-trash2 lucide-trash-2"
-                                        aria-hidden="true">
-                                        <path d="M3 6h18"></path>
-                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
-                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
-                                        <line x1="10" x2="10" y1="11" y2="17"></line>
-                                        <line x1="14" x2="14" y1="11" y2="17"></line>
-                                    </svg></button></div>
-                        </div>
-                        <div class="volunteer-item">
-                            <div class="volunteer-info">
-                                <h3>Phoebe Buffay</h3>
-                                <p>Nantes</p>
-                            </div>
-                            <div class="volunteer-actions"><button class="action-btn delete-btn"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="lucide lucide-trash2 lucide-trash-2"
-                                        aria-hidden="true">
-                                        <path d="M3 6h18"></path>
-                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
-                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
-                                        <line x1="10" x2="10" y1="11" y2="17"></line>
-                                        <line x1="14" x2="14" y1="11" y2="17"></line>
-                                    </svg></button></div>
-                        </div>
-                        <div class="volunteer-item">
-                            <div class="volunteer-info">
-                                <h3>Joey Tribbiani</h3>
-                                <p>Nantes</p>
-                            </div>
-                            <div class="volunteer-actions"><button class="action-btn delete-btn"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="lucide lucide-trash2 lucide-trash-2"
-                                        aria-hidden="true">
-                                        <path d="M3 6h18"></path>
-                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
-                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
-                                        <line x1="10" x2="10" y1="11" y2="17"></line>
-                                        <line x1="14" x2="14" y1="11" y2="17"></line>
-                                    </svg></button></div>
-                        </div>
-                        <div class="volunteer-item">
-                            <div class="volunteer-info">
-                                <h3>Chandler Bing</h3>
-                                <p>Paris</p>
-                            </div>
-                            <div class="volunteer-actions"><button class="action-btn delete-btn"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="lucide lucide-trash2 lucide-trash-2"
-                                        aria-hidden="true">
-                                        <path d="M3 6h18"></path>
-                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
-                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
-                                        <line x1="10" x2="10" y1="11" y2="17"></line>
-                                        <line x1="14" x2="14" y1="11" y2="17"></line>
-                                    </svg></button></div>
-                        </div>
-                        <div class="volunteer-item">
-                            <div class="volunteer-info">
-                                <h3>Ross Geller</h3>
-                                <p>Lyon</p>
-                            </div>
-                            <div class="volunteer-actions"><button class="action-btn delete-btn"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="lucide lucide-trash2 lucide-trash-2"
-                                        aria-hidden="true">
-                                        <path d="M3 6h18"></path>
-                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
-                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
-                                        <line x1="10" x2="10" y1="11" y2="17"></line>
-                                        <line x1="14" x2="14" y1="11" y2="17"></line>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
+                        <div class="volunteer-actions"><button class="action-btn delete-btn"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash2 lucide-trash-2"
+                                    aria-hidden="true">
+                                    <path d="M3 6h18"></path>
+                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                    <line x1="10" x2="10" y1="11" y2="17"></line>
+                                    <line x1="14" x2="14" y1="11" y2="17"></line>
+                                </svg></button></div>
                     </div>
+
                 </div>
-            </main>
-            <div class="modal-overlay" id="modal">
-                <div class="modal">
-                    <h3>Add a volunteer</h3>
-                    <form class="form-container">
-                        <div><label class="form-label">First Name</label><input id="fname" required="" type="text" value=""></div>
-                        <div><label class="form-label">Last name</label><input id="lname" required="" type="text" value=""></div>
-                        <div><label class="form-label">Email</label><input id="email" required="" type="email" value=""></div>
-                        <div><label class="form-label">Password</label><input id="password" required="" type="password" value="">
-                        </div>
-                        <div><label class="form-label">City</label><input id="location" required="" type="text" value="">
-                        </div>
-                        <div class="modal-actions">
-                            <button type="submit" class="submit-btn" id="add">Add</button>
-                            <button type="button" class="submit-btn" id="cancel"
-                                style="background-color: rgb(107, 114, 128);">Cancel</button>
-                        </div>
-                    </form>
-                </div>
+        </div>
+        </main>
+        <div class="modal-overlay" id="modal">
+            <div class="modal">
+                <h3>Add a volunteer</h3>
+                <form class="form-container">
+                    <div><label class="form-label">First Name</label><input id="fname" required="" type="text" value="">
+                    </div>
+                    <div><label class="form-label">Last name</label><input id="lname" required="" type="text" value="">
+                    </div>
+                    <div><label class="form-label">Email</label><input id="email" required="" type="email" value="">
+                    </div>
+                    <div><label class="form-label">Password</label><input id="password" required="" type="password"
+                            value="">
+                    </div>
+                    <div><label class="form-label">City</label><input id="location" required="" type="text" value="">
+                    </div>
+                    <div class="modal-actions">
+                        <button type="submit" class="submit-btn" id="add">Add</button>
+                        <button type="button" class="submit-btn" id="cancel"
+                            style="background-color: rgb(107, 114, 128);">Cancel</button>
+                    </div>
+                </form>
             </div>
         </div>
+    </div>
     </div>
     <footer>
         <p class="info-text">🌱 Thanks for acting for Earth. You're part of the change.</p>
