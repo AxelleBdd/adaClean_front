@@ -7,6 +7,18 @@ const addButton = document.getElementById("addVolunteer");
 const getUserURL = ("http://localhost:8081/api/volunteer/all");
 const createUserURL = ("http://localhost:8081/api/volunteer");
 
+const inputFName = document.getElementById("fname");
+const inputLastName = document.getElementById("lname");
+const inputEmail = document.getElementById("email");
+const inputPassword = document.getElementById("Password");
+const inputLocation = document.getElementById("Location");
+
+const submitButton = document.getElementById("add");
+const cancelButton = document.getElementById("cancel");
+const modal = document.getElementById("modal");
+
+
+
 
 
 
@@ -52,12 +64,31 @@ async function fetchUsers() { // Get users (Volunteer management)
 
 
 async function createUser() { // to create the users
+
+    const dataUser = {
+        first_name: inputFName.value,
+        last_name: inputLastName.value,
+        city: inputLocation.value,
+        status: "user",
+        email: inputEmail.value,
+        password: inputPassword.value,
+    }
+     
+
     try {
 
-        const response = await fetch(`${createUserURL}`);
+        const response = await fetch(createUserURL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json", // unsupported media type 
+                
+            },
+            body: JSON.stringify(dataUser)
+
+        });
         const result = await response.json();
-      
-        console.log(result);
+        alert("Utilisateur créé :", result)
+
 
 
     }
@@ -74,8 +105,22 @@ async function createUser() { // to create the users
 // Exécution du code 
 
 fetchUsers();
+modal.style.display = "none";
 
 addButton.addEventListener("click", function () {
-    fetchUsers()
+    modal.style.display = "flex";
 });
 
+submitButton.addEventListener("click", function () {
+    createUser();
+    modal.style.display = "none";
+})
+
+cancelButton.addEventListener("click", function () {
+    modal.style.display = "none";
+    inputFName.innerText = "";
+    inputLastName.innerText = "";
+    inputEmail.innerText = "";
+    inputPassword.innerText = "";
+    inputLocation.innerText = "";
+})
